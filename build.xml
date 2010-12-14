@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<project basedir="." name="JSpecRunner" default="run">
+
+    <target name="run">
+        <sequential>
+            <java jar="test/lib/js.jar" failonerror="true" fork="true">
+                <arg value="-opt"/>
+                <arg value="-1"/>
+                <arg value="Test/lib/run.js"/>
+                <arg value="Test/tests"/>
+                <arg value="Resources/js"/>
+            </java>
+        </sequential>
+    </target>
+
+</project>

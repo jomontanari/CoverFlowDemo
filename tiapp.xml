@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+<id>com.jocranford.coverflowexample</id>
+<name>CoverFlowExample</name>
+<version>1.0</version>
+<publisher>jocranford</publisher>
+<url>http://www.postposttechnical.com</url>
+<description>No description provided</description>
+<copyright>2010 by jocranford</copyright>
+<icon>default_app_logo.png</icon>
+    <persistent-wifi>false</persistent-wifi>
+    <prerendered-icon>false</prerendered-icon>
+    <statusbar-style>default</statusbar-style>
+    <statusbar-hidden>false</statusbar-hidden>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>false</navbar-hidden>
+    <analytics>true</analytics>
+<guid>b6a0f482-3952-4c42-8451-f63374aa47b3</guid>
+</ti:app>
