@@ -30,9 +30,8 @@ function CoverFlowItem(itemName, theWindow) {
             width:650
         })
 
-        var button = Titanium.UI.createButton({title:"Close",height:40});
 
-        view.add(button);
+        view.add(new CloseButton().create());
 
         self.enlargedView = view;
     }
