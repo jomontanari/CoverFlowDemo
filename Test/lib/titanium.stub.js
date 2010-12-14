@@ -13,25 +13,31 @@ function APIStub() {
 
 function UIStub() {
     this.iPhone = new iPhoneStub();
-    this.createButton = function(obj) { return new ButtonStub(obj);}
-    this.createView = function(obj) {return new ViewStub(obj);}
+    this.createButton = function(obj) { return new ObjectStub(obj);}
+    this.createView = function(obj) {return new ObjectStub(obj);}
+    this.createLabel = function(obj) {return new ObjectStub(obj)}
 }
 
-function ButtonStub(obj) {
-    this.title = obj.title;
-    this.height = obj.height;
-    this.bottom = obj.bottom;
-}
-
-function ViewStub(obj) {
-    var children = [];
-    this.children = children;
+function ObjectStub(obj) {
+    
     this.backgroundImage = obj.backgroundImage;
     this.height = obj.height;
     this.width = obj.width;
     this.zIndex = obj.zIndex;
     this.hidden = false;
+    this.title = obj.title;
+    this.height = obj.height;
+    this.bottom = obj.bottom;
+    this.top = obj.top;
+    this.text = obj.text;
+    this.backgroundColor = obj.backgroundColor;
+    this.color = obj.color;
+    this.textAlign = obj.textAlign;
+
     this.hide = function(){hidden=true};
+
+    var children = [];
+    this.children = children;
     this.add = function(obj){children.push(obj)};
 }
 

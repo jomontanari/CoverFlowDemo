@@ -25,15 +25,7 @@ function CoverFlowItem(itemName, theWindow) {
     }
 
     function createEnlargedView() {
-        var view = Titanium.UI.createView({
-            height:650,
-            width:650
-        })
-
-
-        view.add(new CloseButton().create());
-
-        self.enlargedView = view;
+        self.enlargedView = new EnlargedView(self.name);
     }
 
     function setUp() {

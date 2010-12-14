@@ -1,12 +1,9 @@
 function CloseButton() {
-
-    this.create = function() {
-        var button = Titanium.UI.createButton({
-            title:"Close",
-            height:40,
-            bottom:0
-        });
-        return button;
-    }
-
+    var button = Titanium.UI.createButton({
+        title:"Close",
+        height:40,
+        width:300,
+        bottom:60
+    });
+    return button;
 }

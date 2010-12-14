@@ -23,34 +23,20 @@ describe('CoverFlowItem', function() {
         view.zIndex.should.be(1);
     });
 
-    it('should create an enlarged view with the specified height, width and zIndex', function() {
+    it('should contain an enlarged view', function() {
 
         var itemName = "red";
 
         var window = {
             add : function(){}
         }
-
 
         var item = new CoverFlowItem(itemName, window);
 
         var view = item.enlargedView;
-        view.height.should.be(650);
-        view.width.should.be(650);
+        view.height.should.be(400);
+        view.width.should.be(400);
     });
 
-    it('should add a button to the enlarged view', function() {
-
-        var itemName = "red";
-
-        var window = {
-            add : function(){}
-        }
-
-        var item = new CoverFlowItem(itemName, window);
-        var button = item.enlargedView.children[0];
-
-        button.title.should.be("Close");
-    });
-
+    
 });
