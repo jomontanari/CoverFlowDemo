@@ -1,18 +1,11 @@
-Welcome to your Appcelerator Titanium Mobile Project
+CoverFlow Example
+=================
 
-This is a blank project.  Start by editing your application's app.js to 
-make your first mobile project using Titanium.
+This project is an attempt to build a basic, reusable coverflow with code tested using JSpec.
 
-
-
-----------------------------------
-Stuff our legal folk make us say:
-
-Appcelerator, Appcelerator Titanium and associated marks and logos are 
-trademarks of Appcelerator, Inc. 
-
-Titanium is Copyright (c) 2009-2010 by Appcelerator, Inc. All Rights Reserved.
-
-Titanium is licensed under the Apache Public License (Version 2). Please
-see the LICENSE file for the full license.
-
+Features to include:
+* Coverflow for larger images
+* Click on image within coverflow to enlarge
+* After enlarging image animates to reveal second view
+* Second view includes 'Close' button to close
+* Click on second view to reveal more
