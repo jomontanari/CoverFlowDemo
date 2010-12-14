@@ -2,7 +2,7 @@ describe("animator", function() {
 
     Ti = new TiStub();
 
-    it("should do something", function() {
+    it("should animate the first view", function() {
 
         var viewToAnimate = {
             animate:function(obj) {}

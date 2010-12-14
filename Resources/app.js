@@ -1,6 +1,7 @@
-Titanium.include("coverFlowItems.js");
-Titanium.include("coverFlowItem.js");
-Titanium.include("animator.js");
+Titanium.include("js/coverFlowItems.js");
+Titanium.include("js/coverFlowItem.js");
+Titanium.include("js/animator.js");
+Titanium.include("js/closebutton.js");
 
 var mainWindow = Titanium.UI.createWindow({
     backgroundColor:'#000'
