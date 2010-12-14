@@ -2,7 +2,10 @@ function EnlargedView(title) {
 
     var view = Titanium.UI.createView({
         height:400,
-        width:400
+        width:400,
+        backgroundColor:'#ccc',
+        borderWidth:'2',
+        borderColor:'#fff'
     });
 
     var label = Titanium.UI.createLabel({

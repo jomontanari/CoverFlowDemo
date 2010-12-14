@@ -3,7 +3,7 @@ function CloseButton() {
         title:"Close",
         height:40,
         width:300,
-        bottom:60
+        bottom:10
     });
     return button;
 }

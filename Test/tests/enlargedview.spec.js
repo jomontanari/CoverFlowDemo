@@ -6,6 +6,7 @@ describe("EnlargedView", function() {
 
         view.height.should.be(400);
         view.width.should.be(400);
+        view.backgroundColor.should.be('#ccc')
     });
 
     it('should contain a close button', function() {

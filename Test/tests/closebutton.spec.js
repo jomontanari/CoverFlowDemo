@@ -8,7 +8,7 @@ describe('CloseButton', function() {
 
         button.title.should.be("Close");
         button.height.should.be(40);
-        button.bottom.should.be(60);
+        button.bottom.should.be(10);
     });
 
     it('should have an event handler to close and restore the enlarged view', function() {
