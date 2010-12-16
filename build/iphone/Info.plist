@@ -19,7 +19,7 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>com.jocranford.coverflowexample</string>
+			<string>com.thoughtworks.salespad</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>coverflowexample</string>
@@ -27,7 +27,7 @@
 		</dict>
 	</array>
 	<key>CFBundleIdentifier</key>
-	<string>com.jocranford.coverflowexample</string>
+	<string>com.thoughtworks.salespad</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -37,7 +37,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.0.1292499846</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UISupportedInterfaceOrientations</key>

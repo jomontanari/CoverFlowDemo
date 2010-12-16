@@ -11,21 +11,37 @@ function CoverFlowItem(itemName, theWindow) {
         return defaultFolder + self.name + imgExtension;
     }
 
+    this.getImageArray = function() {
+        var fileList = new DirectoryReader(defaultFolder + self.name).getListOfImageFiles();
+        var images = [];
+        for(var img in fileList) {
+            images.push(defaultFolder + itemName + "/" + fileList[img]);
+        }
+        return images;
+    }
+
+    this.hide = function() {
+        self.currentView.hide();
+        self.window.remove(self.currentView);
+        createCurrentView();
+    }
+
     function createCurrentView() {
         var view = Titanium.UI.createView({
             backgroundImage:self.asImage(),
-            height:400,
-            width:400,
+            height:720,
+            width:720,
             zIndex:1
         });
         view.hide();
+        var animator = new Animator(view, null)
+        animator.scale(0.56, 1, null);
         self.window.add(view);
         self.currentView = view;
-        Titanium.API.info(self.window);
     }
 
     function createEnlargedView() {
-        self.enlargedView = new EnlargedView(self.name);
+        self.enlargedView = new EnlargedView(self.name, self.getImageArray());
     }
 
     function setUp() {

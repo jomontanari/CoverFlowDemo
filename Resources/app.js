@@ -3,6 +3,8 @@ Titanium.include("js/coverFlowItem.js");
 Titanium.include("js/animator.js");
 Titanium.include("js/closebutton.js");
 Titanium.include("js/enlargedview.js");
+Titanium.include("js/directoryreader.js");
+Titanium.include("js/imagespinner.js");
 
 var mainWindow = Titanium.UI.createWindow({
     backgroundColor:'#000'
@@ -21,12 +23,19 @@ var coverFlow = Titanium.UI.createCoverFlowView({
     zIndex:0
 });
 
+var currentItem = null;
+
 coverFlow.addEventListener('click', function(e) {
     var clickedItem = coverFlowItems.getItem(e.index);
     var animator = new Animator(clickedItem.currentView, clickedItem.enlargedView);
-    animator.scale(1.8, 500, animator.change);
-
+    animator.scaleAndShow(1, 500, animator.change);
+    currentItem = clickedItem;
 });
+
+function closeCurrentView() {
+    var animator = new Animator(currentItem.currentView);
+    animator.scale(0.56, 500, currentItem.hide);
+}
 
 mainWindow.add(coverFlow);
 mainWindow.open();

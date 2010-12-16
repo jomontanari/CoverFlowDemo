@@ -3,13 +3,18 @@ function Animator(viewToAnimate, viewToChangeTo) {
     var view = viewToAnimate;
     var secondView = viewToChangeTo;
 
-    this.scale = function(scaleFactor, millisecondsDuration, callback) {
+    this.scaleAndShow = function(scaleFactor, millisecondsDuration, callback) {
         view.show();
+        this.scale(scaleFactor, millisecondsDuration, callback);
+    }
+    
+    this.scale = function(scaleFactor, millisecondsDuration, callback) {
+
         var t = Titanium.UI.create2DMatrix().scale(scaleFactor);
         var transformAnimation = Titanium.UI.createAnimation({transform:t,duration:millisecondsDuration});
 
         transformAnimation.addEventListener("complete", function(e) {
-            callback(e);
+            if (callback != null) callback(e);
         });
 
         view.animate(transformAnimation);
